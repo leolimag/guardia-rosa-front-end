@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<div style="height: 100%;">
+    <div class="post" *ngIf="post">
+        <div class="user">
+            <ion-icon (click)="back()" name="arrow-back-outline" class="arrow"></ion-icon>
+            <div class="profile-picture-box">
+                <div *ngIf="post.foto">
+                  <img class="profile-picture" [src]="'data:image/jpeg;base64,' + post.foto" *ngIf="post.foto" alt="Profile Image">
+                </div>
+                <div *ngIf="!post.foto">
+                  <ion-icon class="perfil" name="person-circle"></ion-icon>
+                </div>
+            </div>
+            <div class="name">
+                {{post.usuario.nome}} <p class="date-post">{{post.dataFormatada}}</p>
+            </div>
+        </div>
+        <div class="message">{{post.conteudo}}</div>
+        <div class="like">
+            <div class="div-icons-post" (click)="likePost(post.id); $event.stopPropagation()"> 
+              <div id="{{post.id}}-curtidass">{{post.curtidas}}</div> 
+              <ion-icon id="{{post.id}}-hearts" class="icon-post" [name]="post.curtido ? 'heart' : 'heart-outline'"></ion-icon>
+            </div>
+            <div class="div-icons-post"> 
+              <div>{{post.comentarios}}</div> 
+              <ion-icon class="icon-post" (click)="addComment()" name="chatbubble-outline"></ion-icon>
+            </div>
+            <div class="div-icons-post"> 
+              <div>0</div> 
+              <ion-icon class="icon-post" name="bookmark-outline"></ion-icon>
+            </div>
+          </div>
+    </div>
+    
+    <p class="comments-text">Comentários</p>
+    <ion-content *ngIf="comentarios.length > 0" class="comment">
+        <ion-list style="text-align: -webkit-center;">
+            <ion-item *ngFor="let comentario of comentarios; let index">
+                <div class="comment">
+                    <div class="comments">
+                        <div class="user">
+                            <div class="profile-picture-box">
+                                <div *ngIf="comentario.foto">
+                                  <img class="profile-picture" [src]="'data:image/jpeg;base64,' + comentario.foto" *ngIf="comentario.foto" alt="Profile Image">
+                                </div>
+                                <div *ngIf="!comentario.foto">
+                                  <ion-icon class="perfil" name="person-circle"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="name">
+                            {{comentario.usuario.nome}}  <p class="date-comment">{{comentario.dataFormatada}}</p>
+                            </div>
+                            <div *ngIf="comentario.usuario.id == user">
+                              <ion-icon (click)="presentActionSheet(comentario.id)" name="ellipsis-vertical-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="message">{{comentario.conteudo}}</div>
+                        <div class="like-comment">
+                            <div class="div-icons-post" (click)="likeComment(comentario.id); $event.stopPropagation()"> 
+                            <div id="{{comentario.id}}-curtidasComment">{{comentario.curtidas}}</div> 
+                            <ion-icon id="{{comentario.id}}-heartComment" class="icon-post" [name]="comentario.curtido ? 'heart' : 'heart-outline'"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+    </ion-content>
+    <div *ngIf="comentarios.length === 0">
+        <p class="no-comment">Nenhum comentário disponível.</p>
+    </div>
+</div>
+
+<app-footer></app-footer>

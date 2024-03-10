@@ -1,0 +1,56 @@
+<form class="content" (ngSubmit)="onSubmit()">
+
+  <div style="margin-bottom: 24px;">
+    <div class="container-title">
+      <ion-icon (click)="back()" name="arrow-back-sharp"></ion-icon>
+    </div>
+    <span class="register-title">Cadastre-se</span>
+  </div>
+
+  <div class="box">
+    <ion-input
+      class="custom" 
+      type="text"
+      [(ngModel)]="name" 
+      name="name"
+      fill="outline"
+      label="Nome"
+      labelPlacement="floating">
+    </ion-input>
+
+    <ion-input
+      class="custom" 
+      type="email"
+      [(ngModel)]="email" 
+      name="email"
+      fill="outline"
+      label="E-mail"
+      labelPlacement="floating">
+    </ion-input>
+
+    <ion-input
+      class="custom" 
+      type="password"
+      [(ngModel)]="password" 
+      name="senha"
+      fill="outline"
+      label="Senha"
+      labelPlacement="floating">
+    </ion-input>
+
+    <ion-input
+      class="custom" 
+      type="password"
+      [(ngModel)]="confirmPassword" 
+      name="confirmPassword"
+      fill="outline"
+      label="Confirmar senha"
+      labelPlacement="floating">
+    </ion-input>
+  </div>
+
+  <div class="register-button">
+    <input class="register" type="submit" value="Cadastrar">
+  </div>
+
+</form>

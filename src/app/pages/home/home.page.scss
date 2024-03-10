@@ -1,0 +1,208 @@
+.post-feed {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .post-empty-list {
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    place-content: center;
+    padding-bottom: 40%;
+    background: rgba(243, 75, 107, 0.8196078431);
+}
+
+.post-icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.p-create-post {
+  text-align: center;
+}
+
+.item-inner {
+ width: 100%;
+ padding: 0;
+ margin-left: -16px;
+}
+
+.button-add-post {
+  --background: white;
+  --color: black;
+  --border-radius: 7px;
+  --border-style: solid;
+  --border-width: 1px;
+  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+}
+
+  .post {
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 12px 0 6px;
+  }
+
+  .but-like {
+    padding: 0 10px;
+  }
+  
+  .user-photo {
+    width: 40px;
+    height: 40px;
+    background-color: #aaa;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .user {
+    margin-top: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 12px;
+  }
+ 
+  .name {
+    margin-left: 10px;
+    width: 75%;
+    font-size: 18px;
+  }
+  
+  .message {
+    margin-top: 30px;
+    font-size: 14px;
+    padding: 0 20px;
+    text-align: justify;
+  }
+
+.icon-post {
+  height: 20px;
+  width: 20px;
+  margin-left: 4px;
+}
+
+.div-icons-post {
+  justify-content: center;
+  display: flex;
+  margin-left: 15px;
+}
+
+.like {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.profile-picture-box {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  ion-icon {
+      height: 50px;
+      width: 50px;
+      color: white;
+  }
+
+  button {
+      background: ghostwhite;
+      color: black;
+      border-radius: 8px;
+      border-style: solid;
+      border-width: 1px;
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+      width: 160px;
+      height: 34px;
+      font-family: sans-serif;
+  }
+
+  .profile-picture {
+      height: 40px;
+      width: 40px;
+      border-radius: 90px;
+  }
+}
+
+.user {
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+}
+
+.message {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.feed {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: black;
+  font-weight: 600;
+  align-self: center;
+}
+
+.alert-button {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 75px;
+  width: 100px;
+  background: white;
+  align-items: center;
+  background: red;
+  border-radius: 20px;
+}
+
+.alert-buttons-container {
+  align-self: center;
+  padding: 8px 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.alert {
+  background: none;
+}
+
+.desc {
+  margin: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.alert-icon {
+  color: white;
+    font-size: 24px;
+}
+
+ion-fab {
+  top: 80%;
+    left: 75%;
+    border-radius: 50px;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+  position: fixed;
+}
+
+ion-fab-button {
+  --background: linear-gradient(400deg, #f3cbd3, #f34b6b);
+}
+  

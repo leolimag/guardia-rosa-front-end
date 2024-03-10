@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<ion-content *ngIf="posts.length > 0">
+    <ion-list style="text-align: -webkit-center;">
+        <ion-item class="item-inner" *ngFor="let post of posts; let index">
+            <div class="post">
+                <div class="profile-picture-box">
+                    <div *ngIf="post.foto">
+                      <img class="profile-picture" [src]="'data:image/jpeg;base64,' + post.foto" *ngIf="post.foto" alt="Profile Image">
+                    </div>
+                    <div *ngIf="!post.foto">
+                      <ion-icon class="perfil" name="person-circle"></ion-icon>
+                    </div>
+                    <div class="name">
+                        {{post.usuario.nome}}
+                    </div>
+                    <ion-icon id="trash-button-{{post.id}}" (click)="confirmDeletePost(post.id)" class="trash" name="trash-outline"></ion-icon>
+                </div>
+                <div class="message">{{post.conteudo}}</div>
+            </div>
+        </ion-item>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
+
+<div *ngIf="posts.length === 0" class="post-empty-list">
+    <ion-icon name="create" class="post-icon"></ion-icon>
+    <p class="p-create-post"><strong>Você ainda não possui nenhuma postagem.</strong></p>
+</div>
+
+<app-footer></app-footer>

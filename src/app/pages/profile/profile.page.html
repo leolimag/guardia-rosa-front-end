@@ -1,0 +1,29 @@
+<div class="container">
+
+	<div class="profile-header">
+		<h1>Meus Dados</h1> 
+		<ion-icon name="female-outline"></ion-icon>
+	</div>
+
+	<div class="profile-picture-box">
+		<ion-icon  *ngIf="!profileImage" class="perfil" name="person-circle"></ion-icon>
+		<img class="profile-picture" [src]="profileImage" *ngIf="profileImage" alt="Profile Image">
+		<button (click)="takePhoto()">Carregar foto de perfil</button>
+	</div>
+	
+	<div class="content">
+		<div class="column">
+			<small>Nome</small>
+			<span class="infos">{{user.name}}</span>
+		</div>
+		<div class="column">
+			<small>E-mail:</small>
+			<span class="infos">{{user.email}}</span>
+		</div>
+	</div>
+
+	<ion-button (click)="openRemoveUserDialog()" class="button-delete-user">Excluir minha conta</ion-button>
+</div>
+
+
+<app-footer></app-footer>

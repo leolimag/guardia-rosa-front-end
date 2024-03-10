@@ -1,0 +1,47 @@
+.container {
+  padding: 16px;
+  height: 100%;
+  background: rgba(243, 75, 107, 0.8196078431);
+}
+
+.content {
+  margin-top: 46px;
+  height: 75%;
+}
+
+.default-btn {
+  background: white;
+  color: black;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+  width: 140px;
+  height: 34px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.item-box {
+  --border-width: 0px;
+  --border-style: none;
+  border-radius: 16px;
+  height: 90%;
+}
+
+.ion-valid.sc-ion-textarea-md-h {
+  --highlight-color: white;
+}
+
+.text-area {
+  height: 100%;
+    padding: 32px;
+    color: white;
+    --border-color: white;
+}

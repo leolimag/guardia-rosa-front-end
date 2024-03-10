@@ -1,0 +1,54 @@
+.post-container {
+  height: 100%;
+  padding: 16px;
+  width: 100%;
+}
+
+.post {
+  min-height: 60px;
+  max-height: 140px;
+  overflow: auto;
+  border: 1px solid #cdc6c6;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-radius: 0px 0px 30px 0px;
+  padding: 8px 24px;
+  font-size: 14px;
+  text-align: justify;
+  margin: 16px 0;
+}
+
+.back {
+  height: 40px;
+    width: 170px;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    background: black;
+    border: 1px solid white;
+}
+
+.title-post {
+  font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.like {
+  display: flex;
+  place-content: flex-end;
+}
+
+.like span {
+  margin: 5px 8px 0 0;
+}
+
+.like button {
+  background: none;
+}

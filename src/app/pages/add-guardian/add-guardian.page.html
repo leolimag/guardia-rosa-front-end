@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<div class="container">
+  <button class="back" (click)="backToGuardian()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </button>
+
+  <h2 class="title">Cadastre um novo guardião</h2>
+  
+    <div class="inputs">
+      <ion-input 
+        type="text"
+        fill="outline"
+        label="Nome"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="name">
+      </ion-input>
+
+      <ion-input 
+        type="number"
+        fill="outline"
+        label="Telefone"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="phone">
+      </ion-input>
+
+    </div>
+
+    <div class="box-button">
+      <button class="confirm" (click)="addGuardian()">Cadastrar<ion-icon name="checkmark-circle-outline"></ion-icon></button>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

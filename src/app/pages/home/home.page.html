@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<ion-content *ngIf="posts.length > 0">
+  <ion-list style="text-align: -webkit-center;">
+    <ion-item class="item-inner" *ngFor="let post of posts; let index">
+      <div class="post" (click)="goToPost(post)">
+        <div class="user">
+          <div class="profile-picture-box">
+            <div *ngIf="post.foto">
+              <img class="profile-picture" [src]="'data:image/jpeg;base64,' + post.foto" *ngIf="post.foto" alt="Profile Image">
+            </div>
+            <div *ngIf="!post.foto">
+              <ion-icon class="perfil" name="person-circle"></ion-icon>
+            </div>
+          </div>
+          <div class="name">
+            {{post.usuario.nome}}
+          </div>
+        </div>
+        <div class="message">{{post.conteudo}}</div>
+        <div class="like">
+          <div class="div-icons-post" (click)="like(post.id); $event.stopPropagation()"> 
+            <div id="{{post.id}}-curtidas">{{post.curtidas}}</div> 
+            <ion-icon id="{{post.id}}-heart" class="icon-post" [name]="post.curtido ? 'heart' : 'heart-outline'"></ion-icon>
+          </div>
+          <div class="div-icons-post" (click)="commentPost(post); $event.stopPropagation()"> 
+            <div>{{post.comentarios}}</div> 
+            <ion-icon class="icon-post" name="chatbubble-outline"></ion-icon>
+          </div>
+          <div class="div-icons-post"> 
+            <div>{{likes}}</div> 
+            <ion-icon class="icon-post" name="bookmark-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  <ion-fab (click)="addPost()"> 
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+ 
+<div *ngIf="posts.length === 0" class="post-empty-list">
+  <ion-icon name="create" class="post-icon"></ion-icon>
+  <p class="p-create-post"><strong>Compartilhe conosco algum momento, experiência ou conselho. Sua ajuda pode salvar vidas!</strong></p>
+  <ion-button (click)="addPost()" class="button-add-post">
+  <ion-icon slot="start" name="add"></ion-icon>
+    Criar postagem
+  </ion-button>
+</div>
+
+<app-footer></app-footer>

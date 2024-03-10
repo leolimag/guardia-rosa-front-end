@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="container">
+  <h1>Guardiões</h1>
+
+  <div class="guardian-container" *ngIf="guardians && guardians.length > 0">
+    <div *ngFor="let guardian of guardians">
+      <div class="guardian-div">
+        <div class="dots-box">
+          <ion-icon style="font-size: 32px; color: white;" class="perfil" name="person-circle"></ion-icon>
+          <div></div>
+          <small class="bold">{{guardian.nome}}</small>
+          <div *ngIf="guardian.favorito"><ion-icon name="star" class="star-icon"></ion-icon></div>
+        </div>
+        <div class="dots-box">
+          <button class="alert-guardian" (click)="confirmAlert(guardian.telefone)">Alertar</button>
+          <ion-icon (click)="presentActionSheet(guardian.id, guardian.nome)" class="dots-button dots" name="ellipsis-horizontal-circle-outline"></ion-icon>   
+        </div>
+      </div>
+    </div>
+    <ion-fab>
+      <ion-fab-button>
+        <ion-icon name="add" (click)="goAddGuardian()"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+  <div *ngIf="guardians.length === 0" class="guardian-empty-list">
+    <ion-icon name="person-add" class="people-circle"></ion-icon>
+    <div class="add-guardian-empty-list">
+      <span class="guardian-text">
+        Clique no botão abaixo e adicione alguém de confiança para ser seu guardião.
+      </span>
+      <span class="info">Você pode adicionar até 10 guardiões.</span>
+    </div>
+    <ion-button (click)="goAddGuardian()" class="button-add-guardian">
+      <ion-icon slot="start" name="add"></ion-icon>
+      Adicionar guardião
+    </ion-button>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
+

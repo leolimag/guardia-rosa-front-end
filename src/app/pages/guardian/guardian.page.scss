@@ -1,0 +1,151 @@
+.guardian-container {
+    height: 60vh;
+    overflow: scroll;
+    padding-right: 6px;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: trasparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: ghostwhite;
+}
+
+.alert-guardian {
+    padding: 5px 8px;
+    margin-right: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px 0px;
+    font-family: sans-serif;
+}
+
+.guardian-empty-list {
+    display: flex;
+    margin-top: 32px;
+    font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.button-add-guardian {
+    --background: ghostwhite;
+    --color: #f34b6bd1;
+    --border-radius: 8px;
+    --border-style: solid;
+    --border-width: 1px;
+    --box-shadow: 0 2px 6px 0 rgb(0 0 0 / 80%);
+}
+
+.people-circle {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.star-icon {
+    margin: 3px 2px 0px 10px;
+    color: rgb(255 255 0);
+}
+
+.dots-box {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    height: 100vh;
+    padding: 16px 8px 16px 16px;
+    overflow: auto;
+    background-color: rgba(243, 75, 107, 0.8196078431);
+}
+
+small {
+    font-size: 90%;
+}
+
+.dots {
+    font-size: 26px;
+    color: ghostwhite;
+}
+
+.guardian-div {
+    width: 100%;
+    display: flex;
+    border: 2px solid ghostwhite;
+    justify-content: space-between;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 6px;
+}
+
+.add-guardian-empty-list {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 24px;
+    text-align: center;
+    gap: 8px;
+}
+
+.profile {
+    width: 32px;
+    height: 30px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: ghostwhite;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 10% 0 22px 0;
+    font-family: sans-serif;
+}
+
+.guardian-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: ghostwhite;
+}
+
+.info {
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: 500;
+    align-self: center;
+    margin-left: 16px;
+    color: ghostwhite;
+    font-family: sans-serif;
+}
+
+ion-fab {
+    top: 80%;
+    left: 75%;
+    border-radius: 50px;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+}
+
+ion-fab-button {
+    --background: ghostwhite;
+    --color: #f34b6bd1;
+}
+
+.dots-button {
+    --background: transparent;
+    --border: none;
+    --padding-bottom: 0;
+    --padding-end: 0;
+    --padding-start: 0;
+    --padding-left: 0;
+    --box-shadow: none;
+}

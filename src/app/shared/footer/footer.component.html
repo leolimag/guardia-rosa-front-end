@@ -1,0 +1,25 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button class="bg-style" (click)="goHome()" tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+      Home
+    </ion-tab-button>
+    <ion-tab-button class="bg-style" (click)="goLocation()" tab="location">
+      <ion-icon name="location-outline"></ion-icon>
+      Localização
+    </ion-tab-button>
+    <ion-tab-button class="bg-style" (click)="alertFavoriteGuardian()" tab="alert">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      Alertar
+    </ion-tab-button>
+    <ion-tab-button class="bg-style" (click)="presentActionSheet()" tab="police">
+      <ion-icon name="call-outline"></ion-icon>
+      Polícia
+    </ion-tab-button>
+    <ion-tab-button class="bg-style" (click)="goGuardian()" tab="guardian">
+      <ion-icon name="person-add-outline"></ion-icon>
+      Guardião
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+

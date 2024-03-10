@@ -1,0 +1,77 @@
+<ion-content *ngIf="!isCamuflado">
+  <div class="login-bg">
+    <div class="title-spacement">
+      <ion-note class="welcome">Bem-vindo ao</ion-note>
+      <ion-note class="title">Abraço Rosa</ion-note>
+    </div>
+
+    <div class="inputs">
+      <ion-input 
+        type="email"
+        fill="outline"
+        label="Email"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="email">
+      </ion-input>
+
+      <ion-input
+        type="password"
+        fill="outline"
+        label="Senha"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="password">
+      </ion-input>
+      <a class="forgot-password" (click)="forgetPassword()">Esqueci minha senha</a>
+
+    </div>
+
+    <div class="join">
+      <button (click)="login()" class="enter-btn">Login</button>
+      <p class="register">Não possui uma conta? <strong class="register-color" (click)="userRegister()"> Inscreva-se já. </strong></p>
+    </div>
+
+  </div>
+</ion-content>
+
+<ion-content *ngIf="isCamuflado">
+  <div style="background: #cb6ccb;">
+    <div class="title-spacement">
+      <ion-note class="welcome">Bem-vindo ao</ion-note>
+      <ion-note class="title">Abraço Rosa</ion-note><img src="/assets/cancer.png" style="width: 20%; height: 10%;" alt="Câncer de Mama">
+    </div>
+
+    <div style="display: flex;align-items: center;align-content: center;align-self: center;justify-content: center;margin-left: 3vh;margin-top: 10px;">
+      <p>Entre em nosso aplicativo para receber mais dicas sobre como prevenir o câncer de mama. Sua melhor defesa é a prevenção!</p>
+    </div>
+    
+    <div class="inputs-camuflado">
+      <ion-input 
+        type="email"
+        fill="outline"
+        label="Email"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="email">
+      </ion-input>
+
+      <ion-input
+        type="password"
+        fill="outline"
+        label="Senha"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="password">
+      </ion-input>
+      <a class="forgot-password" (click)="forgetPassword()">Esqueci minha senha</a>
+
+    </div>
+
+    <div class="join">
+      <button (click)="login()" class="enter-btn">Login</button>
+      <p class="register">Não possui uma conta? <strong class="register-color" (click)="userRegister()"> Inscreva-se já. </strong></p>
+    </div>
+
+  </div>
+</ion-content>

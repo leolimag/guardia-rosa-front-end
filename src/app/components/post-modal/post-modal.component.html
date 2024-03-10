@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<div class="post-container">
+  <span class="title-post">Post feito por: Usuária anônima</span>
+  <div class="post">
+    {{ postContent }}
+  </div>
+
+  <div class="like">
+    <span>{{likes}}</span>
+    <button (click)="like()" class="but-like"><img src="/assets/icon/like.png" alt="botão de curtir"></button>
+  </div>
+
+  <div class="button-container">
+    <button class="back" (click)="closeModal()">Voltar</button>
+  </div>
+</div>
+ 

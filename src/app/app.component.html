@@ -1,0 +1,36 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu *ngIf="auth.isAuthenticated()" contentId="main-content" type="overlay">
+    <!-- <ion-menu contentId="main-content" type="overlay"> -->
+      <ion-content>
+        <ion-list id="inbox-list">
+          <div *ngIf="profileImage != null" class="profile-photo">
+            <img [src]="profileImage" *ngIf="profileImage" alt="Profile Image">
+          </div>
+          <div *ngIf="profileImage == null || profileImage === ''" class="profile-photo">
+            <ion-icon class="perfil" name="person-circle"></ion-icon>
+          </div>
+          <ion-menu-toggle>
+            <ion-item (click)="$event.stopPropagation()" class="menu-bg android-item" lines="none"> 
+              <ion-icon slot="start" [ios]="camuflado.icon + '-outline'" [md]="camuflado.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ camuflado.title }}</ion-label>
+              <ion-toggle (click)="$event.stopPropagation()" (ionChange)="toggleChanged($event)" [checked]="isCamufladoActive"></ion-toggle>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle *ngFor="let p of appPages; let i = index">
+            <ion-item class="menu-bg android-item" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-menu-toggle class="exit">
+          <button (click)="logout()" class="custom-btn">Sair</button>
+        </ion-menu-toggle>
+      
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

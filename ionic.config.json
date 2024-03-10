@@ -1,0 +1,14 @@
+{
+  "name": "Abraço Rosa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "fa3b5d85",
+  "proxies": [
+    {
+      "path": "/api/auth/login",
+      "proxyUrl": "https://abraco-rosa-17121aee456e.herokuapp.com/api/auth/login"
+    }
+  ]
+}

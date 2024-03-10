@@ -1,0 +1,19 @@
+.footer div {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer div ion-icon {
+  font-size: 34px;
+}
+
+.bg-style {
+  background: ghostwhite;
+    color: #f34b6b;
+    font-weight: 500;
+    margin: -1px;
+    font-family: sans-serif;
+}

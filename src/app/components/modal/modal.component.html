@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="content">
+      <ion-textarea class="text-area" maxlength="500" [(ngModel)]="postContent" label="Digite sua mensagem" labelPlacement="floating" fill="outline"></ion-textarea>
+    <div class="box">
+      <button class="default-btn" expand="full" (click)="savePost()">Salvar</button>
+      <button class="default-btn" expand="full" (click)="fecharModal()">Fechar</button>
+    </div>
+  
+  </div>
+</div>

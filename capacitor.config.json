@@ -1,0 +1,8 @@
+{
+  "appId": "com.sistersecure.app",
+  "appName": "Abraço Rosa",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

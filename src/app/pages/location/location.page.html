@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<ion-content>
+  <div class="container">
+    <ion-searchbar placeholder="Pesquisar localização" [(ngModel)]="searchQuery" ></ion-searchbar>
+    <capacitor-google-map #map></capacitor-google-map>
+  </div>
+</ion-content>
+
+<app-footer></app-footer>

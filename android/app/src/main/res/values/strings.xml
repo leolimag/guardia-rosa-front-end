@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Abraço Rosa</string>
+    <string name="title_activity_main">Abraço Rosa</string>
+    <string name="package_name">com.sistersecure.app</string>
+    <string name="custom_url_scheme">com.sistersecure.app</string>
+</resources>
